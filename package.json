@@ -1,0 +1,39 @@
+{
+  "name": "devlopr",
+  "version": "1.0.0",
+  "description": "Devlopr is a jekyll theme built for developers",
+  "main": "index.js",
+  "scripts": {
+    "clean": "shx rm -rf _site/",
+    "webpack-dev": "NODE_ENV=development webpack --config webpack.config.js --progress",
+    "webpack-build": "NODE_ENV=production webpack --config webpack.config.js",
+    "dev": "npm run webpack-dev & jekyll serve",
+    "dev-server": "webpack-dev-server --mode development",
+    "update-build": "shx rm -rf _site/index.html && shx cp -r dist/index.html _site/",
+    "build": "npm run webpack-build && jekyll build && npm run update-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.25.5",
+    "vue": "^3.2.40",
+    "vue-router": "^4.1.5",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "babel-loader": "^8.2.5",
+    "shx": "^0.3.4",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.7.10",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "browser": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

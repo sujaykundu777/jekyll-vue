@@ -1,0 +1,41 @@
+# Site settings
+# -------------
+
+title: jekyll-vue
+description: >-
+  A simple opinionated boilerplate for Jekyll.
+# Page settings
+url: ""
+baseurl: ""
+
+# Make sure that pages don't end up behind weird urls like:`_pages/myPage.html`
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+# Make sure the `_pages/` is processed
+# include:
+#   - _pages
+
+# Make sure the `_site/dist/` is not trashed (webpack output)
+keep_files:
+  - dist
+
+# Exclude from processing (not moved to `_site/`)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - CNAME
+  - LICENSE
+  - README.md
+  - webpack.config.js
+  - "*.lock"
+  - "*.log"
+  - babel.config.js
+  - Readme.md
+
+destination: ./_site
