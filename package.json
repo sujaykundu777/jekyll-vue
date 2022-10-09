@@ -25,6 +25,8 @@
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
     "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
     "shx": "^0.3.4",
     "vue-loader": "^17.0.0",
     "vue-template-compiler": "^2.7.10",
