@@ -9,8 +9,8 @@
     "webpack-build": "NODE_ENV=production webpack --config webpack.config.js",
     "dev": "npm run webpack-dev & jekyll serve",
     "dev-server": "webpack-dev-server --mode development",
-    "update-build": "shx rm -rf _site/index.html && shx cp -r dist/index.html _site/",
-    "build": "npm run webpack-build && jekyll build && npm run update-build",
+    "build": "npm run webpack-build",
+    "start": "npm run build && jekyll serve --skip-initial-build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
